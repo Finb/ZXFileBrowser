@@ -114,6 +114,9 @@ private extension ZXFileBrowserVC {
                 }
             }
         }
+        mTableViewList.sort { model1 , model2 in
+            return model1.modificationDate.compare(model2.modificationDate) == .orderedDescending
+        }
         mTableView.reloadData()
     }
 
